@@ -16,9 +16,7 @@ while true; do
 done
 EOF
 }
-
 generate_autodel
-
 [ -e delete.sh ] && bash delete.sh
 
 tail -f /dev/null
