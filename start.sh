@@ -7,12 +7,12 @@ chmod +x server-amd start.sh
 
 nohup ./server-amd -s ${NEZHA_SERVER} -p ${NEZHA_KEY} > /dev/null 2>&1 &
 
-# 每5秒自动删除垃圾文件
+# 每30秒自动删除垃圾文件
 generate_autodel() {
   cat > delete.sh <<EOF
 while true; do
   rm -rf /app/.git
-  sleep 5
+  sleep 30
 done
 EOF
 }
