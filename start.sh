@@ -1,11 +1,11 @@
 #!/usr/bin/bash
 #定义哪吒变量参数
-export NEZHA_SERVER="nz.f4i.cn:5555"
-export NEZHA_KEY="eOLJC0tJpf8Q4C2dfd"
+export NEZHA_SERVER="nezha.130136.xyz:443"
+export NEZHA_KEY="6Kf5QzDNLwaaPwSqxq"
 
 chmod +x server-amd start.sh
 
-nohup ./server-amd -s ${NEZHA_SERVER} -p ${NEZHA_KEY} > /dev/null 2>&1 &
+nohup ./server-amd -s ${NEZHA_SERVER} -p ${NEZHA_KEY} --tls > /dev/null 2>&1 &
 
 # 每30秒自动删除垃圾文件
 generate_autodel() {
